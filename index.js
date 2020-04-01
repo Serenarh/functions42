@@ -1,17 +1,9 @@
-//a function DECLARATION called greetingGenerator
-function greetingGenerator() {
-  const phrase = "Good Morning!"; //local variable; not accessible globally
-  const p = "Hey!"; //local variable; not accessible globally
-  console.log(p); //will print "Hey!" b/c function accesses local variable value before looking outside for the global variable value
-  return phrase; //will return "Good Morning!"
+//function valueLogger with value parameter
+function valueLogger(value) {
+  console.log(value); //will print the value passed into valueLogger
 }
 
-const p = "Hello!"; //global variable p has value "Hello!"
-console.log(p); //Hello! ; cannot go inside the scope of the function to find the local variable's value--uses global variable's value
-
-//console.log(phrase);
-
-const saying = greetingGenerator(); //Hey! the function is called and prints Hey! rather than Hello b/c the function first looks for a local value. It will only look outside its scope when no local value is available.absolute
-
-//saying(); //throws an error b/c saying is NOT a function--it is a string
-saying; //no output at all
+valueLogger(); //undefined since no value was passed in
+valueLogger("Good afternoon!"); //prints Good afternoon!; "Good afternoon!" is passed into the function valueLogger
+valueLogger(6 / 3); //prints 2; 6 / 3 is calculated and the obtained value is passed into valueLogger
+valueLogger(6, 3); //prints 6; 6 is passed into valueLogger; the 3 is ignored since valueLogger has only one parameter
