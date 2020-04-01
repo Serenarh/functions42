@@ -1,7 +1,8 @@
-//declaration of function doubleValueLogger which has a 2 value parameter
-function doubleValueLogger(value1, value2) {
-  console.log(value1, value2); //prints the 2 values passed to the function
+//declare function add with 3 parameters
+function add(num1, num2, num3) {
+  return num1 + num2 + num3; //function will add 3 numbers passed to the function when the function is called
 }
 
-doubleValueLogger("Glorious", "Day!"); //prints Glorious Day! since these are the 2 values passed to doubleValueLogger
-doubleValueLogger("Greetings!"); //prints Greetings! undefined; Greetings! is the only value passed to doubleValueLogger. Since there are spaces for 2 parameters, the second space returns the value undefined.
+const sum = add(7, 12, 10); //variable sum passes the numbers 7, 12, and 10 to the function add
+
+console.log(sum); //variable sum passes the numbers 7, 12, and to to the function add; function add returns the sum of the 3 numbers and prints 29
