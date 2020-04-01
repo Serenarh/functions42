@@ -1,9 +1,6 @@
-//function valueLogger with value parameter
-function valueLogger(value) {
-  console.log(value); //will print the value passed into valueLogger
+//function declaration for tripler with one parameter
+function tripler(num) {
+  return num * 3; //function returns the result the number passed into the function times 3
 }
-
-valueLogger(); //undefined since no value was passed in
-valueLogger("Good afternoon!"); //prints Good afternoon!; "Good afternoon!" is passed into the function valueLogger
-valueLogger(6 / 3); //prints 2; 6 / 3 is calculated and the obtained value is passed into valueLogger
-valueLogger(6, 3); //prints 6; 6 is passed into valueLogger; the 3 is ignored since valueLogger has only one parameter
+const shouldBeSix = tripler(2); //when used the variable will pass 2 to the function tripler
+console.log(shouldBeSix); //prints 6 -- the variable shouldBeSix passes 2 to the function tripler
